@@ -5,6 +5,7 @@ public class Herbivore extends Animal {
         super(name, latinName);
     }
 
+    @Override
     public String getDetails() {
         return String.format("%s (%s) makan tumbuhan.", name, latinName);
     }

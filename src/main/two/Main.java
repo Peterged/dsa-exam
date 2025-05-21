@@ -1,7 +1,5 @@
 package main.two;
 
-import java.util.LinkedList;
-
 public class Main {
     public static void main(String[] args) {
         SingleLinkedList<Integer> link = new SingleLinkedList<>();

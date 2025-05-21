@@ -17,7 +17,7 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
     }
 
     public void addFirst(E data) {
-        add(data);
+        enqueue(data);
     }
 
     public void addLast(E data) {
