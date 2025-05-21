@@ -1,4 +1,4 @@
-package main.edson.three;
+package main.three;
 
 public class Node<T> {
     T data;

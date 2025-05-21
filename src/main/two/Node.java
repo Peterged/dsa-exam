@@ -1,4 +1,4 @@
-package main.edson.two;
+package main.two;
 
 public class Node<T> {
     T data;

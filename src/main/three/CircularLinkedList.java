@@ -1,4 +1,4 @@
-package main.edson.three;
+package main.three;
 
 // IMPLEMENTASI SINGKAT - Circular Linked list untuk Circular Queue
 public class CircularLinkedList<E> implements CircularQueue<E> {

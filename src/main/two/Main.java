@@ -1,4 +1,4 @@
-package main.edson.two;
+package main.two;
 
 import java.util.LinkedList;
 

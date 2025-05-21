@@ -1,4 +1,4 @@
-package main.edson.three;
+package main.three;
 
 public class CircularLinkedListQueue<T> {
     final CircularLinkedList<T> queue = new CircularLinkedList<>();

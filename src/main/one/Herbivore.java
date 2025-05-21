@@ -1,4 +1,4 @@
-package main.edson.one;
+package main.one;
 
 public class Herbivore extends Animal {
     public Herbivore(final String name, final String latinName) {

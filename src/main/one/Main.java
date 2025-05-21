@@ -1,4 +1,4 @@
-package main.edson.one;
+package main.one;
 
 public class Main {
     public static void main(String[] args) {

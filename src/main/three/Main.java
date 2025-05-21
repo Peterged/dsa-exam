@@ -1,4 +1,4 @@
-package main.edson.three;
+package main.three;
 
 import java.util.Queue;
 import java.util.LinkedList;
