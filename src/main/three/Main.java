@@ -5,13 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        CircularQueue<Integer> arrQueue = new ArrayQueue<>();
-        CircularQueue<Integer> qlink = new CircularLinkedList<>();
+        CircularQueue<Integer> arrQueue = new ArrayQueue<>(numbers.length);
+        CircularQueue<Integer> queueCircularLink = new CircularLinkedList<>();
 
         for (int val : numbers) {
             arrQueue.enqueue(val);
+            queueCircularLink.enqueue(val);
         }
 
-        System.out.println(arrQueue);
+        System.out.printf("Array Circular Queue: \n\t%s\n\n", arrQueue);
+        System.out.printf("Circular Linked List Queue: \n\t%s\n", queueCircularLink);
     }
 }
