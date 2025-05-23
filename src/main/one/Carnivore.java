@@ -6,7 +6,7 @@ public class Carnivore extends Animal {
     }
 
     @Override
-    public String getDetails() {
-        return String.format("%s (%s) makan daging.", name, latinName);
+    public String getFoodDetails() {
+        return String.format("%s (%s) makan daging.", getName(), getLatinName());
     }
 }

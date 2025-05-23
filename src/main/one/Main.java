@@ -5,7 +5,7 @@ public class Main {
         Animal rusa = new Herbivore("Rusa", "Cervidae");
         Animal harimau = new Carnivore("Harimau", "Panthera tigris");
 
-        System.out.println(rusa.getDetails());
-        System.out.println(harimau.getDetails());
+        System.out.println(rusa.getFoodDetails());
+        System.out.println(harimau.getFoodDetails());
     }
 }

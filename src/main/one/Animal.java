@@ -1,15 +1,20 @@
 package main.one;
 
-public class Animal {
-    protected String name;
-    protected String latinName;
+public abstract class Animal {
+    private String name;
+    private String latinName;
 
     protected Animal(final String name, final String latinName) {
         this.name = name;
         this.latinName = latinName;
     }
 
-    protected String getDetails() {
-        return "";
+    public abstract String getFoodDetails();
+
+    public String getName() {
+        return name;
     }
+    public String getLatinName() {
+        return latinName;
+    }   
 }
