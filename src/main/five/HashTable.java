@@ -61,24 +61,29 @@ public class HashTable<E> {
         // Remember start to detect full loop
         int startIndex = bucketIndex;
 
+        int counter = 0;
         do {
             HashEntry<E> entry = buckets[bucketIndex];
-            
-            if (entry == null) {
-                buckets[bucketIndex] = new HashEntry<>(data);
-                size++;
-                return;
+
+            if (entry != null) {
+                if (entry.data.equals(data)) {
+                    return;
+                }
+                bucketIndex = (bucketIndex + 1) % capacity;
+                counter++;
+                continue;
             }
-            
-            if (entry.data.equals(data)) {
-                return;
+
+            if (counter > 0) {
+                System.out.printf("Linear probing (idx %d -> %d) untuk data: %s\n", startIndex, bucketIndex, data);
             }
-            
-            bucketIndex = (bucketIndex + 1) % capacity;
-            System.out.println("Menjalankan linear probing untuk data: " + data);
+
+            buckets[bucketIndex] = new HashEntry<>(data);
+            size++;
+            return;
+
         } while (bucketIndex != startIndex);
 
-        
         throw new IllegalStateException("Tidak ada tempat kosong untuk data: " + data);
     }
 
