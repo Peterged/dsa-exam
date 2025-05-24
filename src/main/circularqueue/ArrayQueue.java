@@ -1,4 +1,4 @@
-package main.three;
+package main.circularqueue;
 
 public class ArrayQueue<E> implements CircularQueue<E> {
     protected final E[] array;

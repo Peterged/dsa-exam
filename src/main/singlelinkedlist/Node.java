@@ -1,4 +1,4 @@
-package main.two;
+package main.singlelinkedlist;
 
 public class Node<T> {
     T data;

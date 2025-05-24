@@ -1,4 +1,4 @@
-package main.four;
+package main.binarysearchtree;
 
 public class Node<T> {
     Node<T> left;

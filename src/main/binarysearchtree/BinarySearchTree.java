@@ -1,4 +1,4 @@
-package main.four;
+package main.binarysearchtree;
 
 public class BinarySearchTree<E extends Comparable<? super E>> {
     private Node<E> root;

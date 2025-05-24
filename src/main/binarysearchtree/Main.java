@@ -1,4 +1,4 @@
-package main.four;
+package main.binarysearchtree;
 
 public class Main {
     public static void main(String[] args) {

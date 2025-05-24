@@ -1,4 +1,4 @@
-package main.two;
+package main.singlelinkedlist;
 
 import java.util.function.Predicate;
 

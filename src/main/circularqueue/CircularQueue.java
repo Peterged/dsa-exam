@@ -1,4 +1,4 @@
-package main.three;
+package main.circularqueue;
 
 public interface CircularQueue<E> {
     boolean enqueue(E data);

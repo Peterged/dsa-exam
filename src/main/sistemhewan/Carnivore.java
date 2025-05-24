@@ -1,4 +1,4 @@
-package main.one;
+package main.sistemhewan;
 
 public class Carnivore extends Animal {
     public Carnivore(final String name, final String latinName) {

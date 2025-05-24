@@ -1,4 +1,4 @@
-package main.five;
+package main.hashtable;
 
 public class HashTable<E> {
 

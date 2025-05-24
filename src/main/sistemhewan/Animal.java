@@ -1,4 +1,4 @@
-package main.one;
+package main.sistemhewan;
 
 public abstract class Animal {
     private String name;
