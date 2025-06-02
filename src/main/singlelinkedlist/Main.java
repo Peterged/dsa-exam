@@ -1,6 +1,4 @@
-package main.two;
-
-import java.util.LinkedList;
+package main.singlelinkedlist;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.three;
+package main.circularqueue;
 
 public class Node<T> {
     T data;

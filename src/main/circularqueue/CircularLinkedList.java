@@ -1,4 +1,4 @@
-package main.three;
+package main.circularqueue;
 
 // IMPLEMENTASI SINGKAT - Circular Linked list untuk Circular Queue
 public class CircularLinkedList<E> implements CircularQueue<E> {
@@ -17,10 +17,10 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
     }
 
     public void addFirst(E data) {
-        add(data);
+        enqueue(data);
     }
 
-    public void addLast(E data) {
+    public boolean addLast(E data) {
         Node<E> newNode = new Node<>(data);
 
         if (isEmpty()) {
@@ -34,6 +34,8 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
         }
 
         size++;
+
+        return true;
     }
 
     public E removeFirst() {
@@ -50,23 +52,6 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
         return data;
     }
 
-    private boolean linkLast(E data) {
-        Node<E> newNode = new Node<>(data);
-
-        if (isEmpty()) {
-            head = newNode;
-            tail = head;
-            tail.next = head;
-        } else {
-            newNode.next = head;
-            head = newNode;
-        }
-
-        size++;
-
-        return true;
-    }
-
     @Override
     public String toString() {
         if (isEmpty()) {
@@ -76,12 +61,13 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
         Node<E> first = head;
         StringBuilder sb = new StringBuilder("[");
 
-        int i = 0;
-        while (i++ == 0 || first != head) {
+        while (true) {
             sb.append(first.data);
 
             if (first.next != head) {
                 sb.append(", ");
+            } else {
+                break;
             }
 
             first = first.next;
@@ -89,8 +75,6 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
 
         return sb.append("]").toString();
     }
-
-
 
     // Queue Operations
     @Override
@@ -101,11 +85,27 @@ public class CircularLinkedList<E> implements CircularQueue<E> {
 
     @Override
     public boolean enqueue(E data) {
-        return linkLast(data);
+        return addLast(data);
     }
 
     @Override
     public E dequeue() {
-        return null;
+        return removeFirst();
+    }
+
+    @Override
+    @SuppressWarnings("unchecked")
+    public E[] getElements() {
+        E[] array = (E[]) new Object[size];
+
+        Node<E> f = head;
+        int i = 0;
+
+        while (i == 0 || f != head) {
+            array[i++] = f.data;
+            f = f.next;
+        }
+
+        return array;
     }
 }

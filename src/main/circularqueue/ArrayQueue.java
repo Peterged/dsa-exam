@@ -1,9 +1,7 @@
-package main.three;
-
-import java.util.Arrays;
+package main.circularqueue;
 
 public class ArrayQueue<E> implements CircularQueue<E> {
-    protected E[] array;
+    protected final E[] array;
     protected final int capacity;
     protected int size = 0;
     protected int top = 0;
@@ -39,8 +37,8 @@ public class ArrayQueue<E> implements CircularQueue<E> {
         return arr;
     }
 
+    @Override
     public String toString() {
-        System.out.println(Arrays.toString(array));
         if (isEmpty()) {
             return "[]";
         }
@@ -61,6 +59,7 @@ public class ArrayQueue<E> implements CircularQueue<E> {
 
     /* Circular Queue Implementation */
 
+    @Override
     public boolean enqueue(E data) {
         if (isFull()) {
             return false;
@@ -71,6 +70,7 @@ public class ArrayQueue<E> implements CircularQueue<E> {
         return true;
     }
 
+    @Override
     public E dequeue() {
         if(isEmpty()) {
             return null;
@@ -84,8 +84,14 @@ public class ArrayQueue<E> implements CircularQueue<E> {
         return data;
     }
 
+    @Override
     public E peek() {
         if (isEmpty()) return null;
         return array[top % capacity]; // top element
+    }
+
+    @Override
+    public E[] getElements() {
+        return array;
     }
 }
